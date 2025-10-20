@@ -1,140 +1,121 @@
-🧠 Documento de Estudo – Organização e Pesquisa de Documentos com Inteligência Artificial
+🧠 Documento: Funcionalidades do Copiloto e Ferramentas da OpenAI
 
-🧩 Contexto
+Criação Assistida por IA com Filtros de Conteúdo
 
-    A crescente quantidade de informações digitais exige métodos mais eficientes para estruturar, localizar e analisar conteúdo. Ferramentas de IA oferecem recursos avançados para ler, entender, indexar e responder perguntas com base em documentos complexos, como relatórios, PDFs, artigos técnicos, e-mails, entre outros.
+✅ 1. Definições Gerais
 
 
+🔹 Copiloto (Copilot)
 
-🔍 Etapas Abordadas nas Aulas
+O Copilot é uma funcionalidade de inteligência artificial integrada a produtos como Microsoft 365 (Word, Excel, PowerPoint, Outlook) ou a ambientes de desenvolvimento como GitHub Copilot. Ele atua como um assistente que ajuda o usuário a:
 
-🔹 1. Ingestão de Conteúdo para IA
+Escrever textos ou e-mails
 
-    Consiste em importar e preparar documentos (PDFs, DOCXs, textos) para uso por sistemas de IA.
+Criar fórmulas e automatizar planilhas
 
-    Técnicas utilizadas:
+Resumir documentos
 
-    Extração de texto estruturado e não estruturado
+Gerar código com base em comandos em linguagem natural
 
-    Conversão de formatos
+Copilot ≠ ferramenta isolada: Ele é um recurso embarcado em outras plataformas.
 
-    Enriquecimento com metadados
 
-    Ferramentas comuns: Azure AI Document Intelligence, Azure Blob Storage, Python com OCR
 
-🔹 2. Criação de Índices Inteligentes
+🔹 OpenAI e suas ferramentas
 
-    Organização das informações por meio de indexação automática, permitindo buscas rápidas e inteligentes.
+A OpenAI é a criadora de modelos de linguagem como o ChatGPT, o Codex e o DALL·E. Suas ferramentas são projetadas para entender, gerar e interpretar linguagem humana, oferecendo:
 
-    Técnicas e recursos:
+Geração de texto: Resumos, ideias, redações, artigos, etc.
 
-    Azure AI Search / Cognitive Search
+Criação de código: Sugestões, automações, explicações de funções
 
-    Criação de índices customizados
+Criação de imagens: A partir de descrições textuais (com o DALL·E)
 
-    Configuração de enriquecedores (skillsets) como análise de linguagem, detecção de entidades, extração de chave
+Análise semântica: Interpretação de perguntas, sentimentos, intenções
 
-🔹 3. Exploração Prática dos Dados
 
-    Após indexar, é possível consultar e explorar os dados com consultas em linguagem natural.
 
-    Aplicações:
+🧰 2. Funcionalidades de Criação Assistida
 
-    Chatbots que respondem com base nos documentos
 
-    Dashboards com filtros inteligentes
+📝 Escrita e reformulação de texto
 
-    Sistemas de perguntas e respostas (Q&A) com IA generativa
+Geração de e-mails, relatórios, resumos e descrições a partir de comandos simples.
 
-🎯 Aplicações Reais
+Reformulação de frases para deixá-las mais claras, curtas ou formais.
 
-    Pesquisa rápida em bases jurídicas, científicas ou acadêmicas
+Exemplo prático no Word com Copilot:
 
-    Análise automatizada de contratos, atas, normas ou relatórios
+Usuário digita: “Escreva uma introdução formal sobre marketing digital.”
+Copilot responde com um parágrafo completo e formatado.
 
-    Criação de assistentes virtuais especializados em documentos internos
 
-💡 Competências Desenvolvidas
+📊 Automatização de tarefas
 
-    Organização e pré-processamento de documentos digitais
+Geração de fórmulas no Excel com base em instruções.
 
-    Criação e personalização de índices cognitivos
+Criação de apresentações automáticas no PowerPoint com base em tópicos.
 
-    Análise e visualização de dados documentais com IA
+Exemplo no Excel com Copilot:
 
-    Compreensão prática de ferramentas no ecossistema Azure (AI Search, Form Recognizer, Language Studio)
+“Crie uma fórmula que calcule o total com desconto de 15%.”
+Fórmula gerada: =A2 * 0.85
 
+💻 Geração de código (GitHub Copilot)
 
-🧪 Exemplo Prático: Análise Inteligente de Contratos PDF com IA
+Completa códigos automaticamente
 
-🎯 Cenário
+Sugere funções ou algoritmos inteiros
 
-Você trabalha em uma empresa que recebe diversos contratos em PDF e precisa de uma forma automatizada de:
+Explica trechos de código
 
-    Ler e organizar os contratos
 
-    Indexar para pesquisa inteligente
 
-    Permitir busca e respostas com IA sobre cláusulas, valores e prazos
+Exemplo no GitHub Copilot (JavaScript):
 
-🔹 1. Ingestão de Conteúdo
+// Função para somar dois números
+function somar(a, b) {
+  return a + b;
+}
 
-    Ferramenta: Azure Form Recognizer (Document Intelligence)
 
-    Ação:
+🎨 Geração de imagens (DALL·E – OpenAI)
 
-        Carregar os contratos em PDF no Azure Blob Storage
+Gera imagens com base em descrições textuais.
 
-        Usar o Form Recognizer para extrair texto, tabelas e campos chave (como "Data de Assinatura", "Valor", "Nome das partes")
+Exemplo:
 
-    Resultado: Dados estruturados extraídos automaticamente de cada contrato.
+“Uma cidade futurista à noite, em estilo cyberpunk.”
 
-🔹 2. Criação de Índices Inteligentes
 
-    Ferramenta: Azure AI Search (Cognitive Search)
 
-    Ação:
+🚦 3. Filtros de Conteúdo e Segurança
 
-        Criar um índice inteligente com os campos extraídos (nome do cliente, valor, datas, cláusulas)
+Tanto no Copilot quanto nas ferramentas da OpenAI, são aplicados filtros para:
 
-        Usar skillsets para:
 
-        Detectar entidades (pessoas, datas, locais)
+🔒 1. Prevenção de conteúdo prejudicial
 
-        Identificar cláusulas importantes com IA
+Bloqueio de termos ofensivos, discriminatórios ou de ódio
 
-        Gerar resumo automático de cada contrato
+Detecção de instruções perigosas ou sensíveis (como criação de malware)
 
-    Resultado: Um banco indexado, pesquisável e enriquecido com informações semânticas.
 
-🔹 3. Exploração dos Dados
+🧑‍⚖️ 2. Conformidade com políticas de uso
 
-    Interface: Aplicativo web com campo de busca (ou bot)
+Evita que os modelos produzam respostas com desinformação, conteúdo sexual explícito ou violação de privacidade
 
-    Ação:
 
-        Usuário digita perguntas como:
+⚠️ 3. Controle de privacidade
 
-        “Qual é o valor do contrato com a empresa X?”
+Dados sensíveis digitados por usuários não são usados para treinar os modelos (em ambientes controlados, como Copilot for Microsoft 365)
 
-        “Quando termina o contrato com o cliente Y?”
 
-        “Qual cláusula trata de rescisão?”
+🧪 4. Exemplos Práticos por Ferramenta
 
-    Resposta: O sistema usa busca semântica e IA para localizar as respostas exatas dentro dos contratos e exibir para o usuário.
-
-
-✅ Resumo do Fluxo
-
-    PDFs → Ingestão (Form Recognizer) → Indexação (AI Search) → Consulta inteligente (App/Bot)
-
-
-🛠️ Ferramentas Usadas
-
-    Azure Blob Storage – armazenamento dos documentos
-
-    Azure Form Recognizer – extração automática de dados dos PDFs
-
-    Azure AI Search – indexação e enriquecimento com IA
-
-    Web App ou Bot – interface de exploração
+Word = (Copilot) Escrever artigos ou resumos-->“Resumo do impacto da IA na educação em até 100 palavras”
+Excel= (Copilot) Automatizar cálculos e análise de dados-->“Mostre a média de vendas dos últimos 6 meses”
+PowerPoint= (Copilot)Criar slides automáticos-->“Apresentação sobre sustentabilidade com 5 tópicos principais”
+ChatGPT= (OpenAI)Conversas, explicações, simulações-->“Explique como funciona a energia solar para crianças”
+GitHub= Copilot	Geração de código-->“Crie uma função em Python que ordena uma lista de nomes”
+DALL·E= (OpenAI)Geração de imagens-->“Um robô cozinhando em uma cozinha dos anos 1950”
