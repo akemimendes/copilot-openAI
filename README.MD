@@ -1,112 +1,140 @@
-🧠 Documento de Estudo e Prática
-Azure Speech Studio e Azure Language Studio
+🧠 Documento de Estudo – Organização e Pesquisa de Documentos com Inteligência Artificial
 
-✅ # Azure Speech Studio
+🧩 Contexto
 
-O Azure Speech Studio é uma plataforma da Microsoft voltada para a criação, teste e personalização de soluções de inteligência artificial de voz. Ele oferece ferramentas para:
+    A crescente quantidade de informações digitais exige métodos mais eficientes para estruturar, localizar e analisar conteúdo. Ferramentas de IA oferecem recursos avançados para ler, entender, indexar e responder perguntas com base em documentos complexos, como relatórios, PDFs, artigos técnicos, e-mails, entre outros.
 
-🎤 Reconhecimento de fala (Speech to Text): Transcreve áudio em tempo real para texto.
 
-🗣️ Síntese de fala (Text to Speech): Converte texto em fala natural, com vozes neurais personalizáveis.
 
-🌍 Tradução de fala: Traduz automaticamente falas entre diferentes idiomas.
+🔍 Etapas Abordadas nas Aulas
 
-🔧 Modelos customizados: Permite treinar vocabulários e modelos acústicos específicos para vocabulários técnicos ou sotaques.
+🔹 1. Ingestão de Conteúdo para IA
 
-Aplicações comuns: legendagem automática, assistentes de voz, comandos por voz, transcrição de reuniões, bots conversacionais com voz.
+    Consiste em importar e preparar documentos (PDFs, DOCXs, textos) para uso por sistemas de IA.
 
-✅ # Azure Language Studio
+    Técnicas utilizadas:
 
-O Azure Language Studio é uma interface para explorar e construir soluções baseadas em Processamento de Linguagem Natural (NLP) usando os serviços de linguagem do Azure. Ele permite:
+    Extração de texto estruturado e não estruturado
 
-💬 Análise de sentimentos: Identifica emoções em textos (positivo, negativo, neutro).
+    Conversão de formatos
 
-🧠 Extração de entidades: Detecta nomes de pessoas, locais, datas, organizações, etc.
+    Enriquecimento com metadados
 
-🏷️ Classificação de texto: Categoriza textos automaticamente com base em temas definidos.
+    Ferramentas comuns: Azure AI Document Intelligence, Azure Blob Storage, Python com OCR
 
-🤖 Compreensão de linguagem (CLU): Cria modelos de IA capazes de entender a intenção de frases em linguagem natural.
+🔹 2. Criação de Índices Inteligentes
 
-✍️ Resumo automático e extração de frases-chave.
+    Organização das informações por meio de indexação automática, permitindo buscas rápidas e inteligentes.
 
-Aplicações comuns: chatbots, análise de feedback de usuários, classificadores automáticos de e-mails, resumo de textos extensos.
+    Técnicas e recursos:
 
-🤖 # Uso combinado: Voz + Linguagem
+    Azure AI Search / Cognitive Search
 
-A combinação do Speech Studio com o Language Studio permite criar soluções completas de análise de fala e linguagem natural, como:
+    Criação de índices customizados
 
-Assistentes virtuais que escutam, entendem e respondem em linguagem natural.
+    Configuração de enriquecedores (skillsets) como análise de linguagem, detecção de entidades, extração de chave
 
-Análise automatizada de chamadas (voz → texto → análise).
+🔹 3. Exploração Prática dos Dados
 
-Interfaces por voz em aplicativos com interpretação de intenções e sentimentos.
+    Após indexar, é possível consultar e explorar os dados com consultas em linguagem natural.
 
-🛠️ # Ferramentas Necessárias
+    Aplicações:
 
-Conta ativa no Microsoft Azure
+    Chatbots que respondem com base nos documentos
 
-Speech Studio: https://speech.microsoft.com/
+    Dashboards com filtros inteligentes
 
-Language Studio: https://language.azure.com/
+    Sistemas de perguntas e respostas (Q&A) com IA generativa
 
-Visual Studio Code (ou IDE de sua escolha)
+🎯 Aplicações Reais
 
-Postman ou similar (para testes de API)
+    Pesquisa rápida em bases jurídicas, científicas ou acadêmicas
 
-Navegador moderno (Google Chrome, Edge, Firefox)
+    Análise automatizada de contratos, atas, normas ou relatórios
 
-📚 # Plano de Atividades para prática
+    Criação de assistentes virtuais especializados em documentos internos
 
-🔹 Etapa 1 – Reconhecimento e Síntese de Fala (Speech Studio)
+💡 Competências Desenvolvidas
 
- - Criar recurso "Speech" no Azure Portal
+    Organização e pré-processamento de documentos digitais
 
- - Usar Speech Studio para:
+    Criação e personalização de índices cognitivos
 
- - Testar reconhecimento de fala (Speech to Text)
+    Análise e visualização de dados documentais com IA
 
- - Criar vozes customizadas
+    Compreensão prática de ferramentas no ecossistema Azure (AI Search, Form Recognizer, Language Studio)
 
- - Testar Text to Speech com idioma PT-BR
 
- - Realizar tradução de voz (Speech Translation)
+🧪 Exemplo Prático: Análise Inteligente de Contratos PDF com IA
 
-🔹 Etapa 2 – Análise de Linguagem Natural (Language Studio)
+🎯 Cenário
 
- - Criar recurso "Language" no Azure Portal
+Você trabalha em uma empresa que recebe diversos contratos em PDF e precisa de uma forma automatizada de:
 
- - Usar Language Studio para:
+    Ler e organizar os contratos
 
- - Analisar sentimentos em textos curtos e longos
+    Indexar para pesquisa inteligente
 
- - Extrair entidades nomeadas (pessoas, locais, datas)
+    Permitir busca e respostas com IA sobre cláusulas, valores e prazos
 
- - Criar um modelo de classificação de texto
+🔹 1. Ingestão de Conteúdo
 
- - Criar um projeto de compreensão de linguagem (LUIS ou CLU)
+    Ferramenta: Azure Form Recognizer (Document Intelligence)
 
-🔹 Etapa 3 – Integração Prática
+    Ação:
 
- - Criar aplicação simples (console/web/app) que:
+        Carregar os contratos em PDF no Azure Blob Storage
 
- - Captura voz do usuário
+        Usar o Form Recognizer para extrair texto, tabelas e campos chave (como "Data de Assinatura", "Valor", "Nome das partes")
 
- - Transcreve em texto com Azure Speech
+    Resultado: Dados estruturados extraídos automaticamente de cada contrato.
 
- - Envia texto para Language Studio
+🔹 2. Criação de Índices Inteligentes
 
- - Interpreta resultado (ex: intenção ou sentimento)
+    Ferramenta: Azure AI Search (Cognitive Search)
 
- - Retorna resposta falada com Text to Speech
+    Ação:
 
-🔹 Etapa 4 – Experimentos e Personalizações
+        Criar um índice inteligente com os campos extraídos (nome do cliente, valor, datas, cláusulas)
 
-- Testar diferentes vozes e sotaques (neural voices)
+        Usar skillsets para:
 
-- Criar vocabulário personalizado no Speech Studio
+        Detectar entidades (pessoas, datas, locais)
 
-- Criar modelos de linguagem customizados (Language Studio)
+        Identificar cláusulas importantes com IA
 
-- Medir desempenho com logs e métricas do Azure
+        Gerar resumo automático de cada contrato
 
-Bom estudo !!
+    Resultado: Um banco indexado, pesquisável e enriquecido com informações semânticas.
+
+🔹 3. Exploração dos Dados
+
+    Interface: Aplicativo web com campo de busca (ou bot)
+
+    Ação:
+
+        Usuário digita perguntas como:
+
+        “Qual é o valor do contrato com a empresa X?”
+
+        “Quando termina o contrato com o cliente Y?”
+
+        “Qual cláusula trata de rescisão?”
+
+    Resposta: O sistema usa busca semântica e IA para localizar as respostas exatas dentro dos contratos e exibir para o usuário.
+
+
+✅ Resumo do Fluxo
+
+    PDFs → Ingestão (Form Recognizer) → Indexação (AI Search) → Consulta inteligente (App/Bot)
+
+
+🛠️ Ferramentas Usadas
+
+    Azure Blob Storage – armazenamento dos documentos
+
+    Azure Form Recognizer – extração automática de dados dos PDFs
+
+    Azure AI Search – indexação e enriquecimento com IA
+
+    Web App ou Bot – interface de exploração
