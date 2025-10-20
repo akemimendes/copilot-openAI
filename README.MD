@@ -1,4 +1,4 @@
-🧠 Documento: Funcionalidades do Copiloto e Ferramentas da OpenAI
+🧠 Copiloto e Ferramentas da OpenAI
 
 Criação Assistida por IA com Filtros de Conteúdo
 
